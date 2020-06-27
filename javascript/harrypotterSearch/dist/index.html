@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-9 mx-auto">
+          <h2 class="h3">Welcome to Hogwarts, the school of magic.</h2>
+          <h5 class="h5">
+            To see information about a student, just type his name in the search
+            bar below.
+          </h5>
+        </div>
+      </div>
+      <button class="btn-primary btn-large" id="selector">
+        Query by other stuff
+      </button>
+      <div class="select-menu position-absolute" id="hidden-menu">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="filler-one">Options</label>
+          </div>
+          <select class="custom-select" id="filler-one">
+            <option selected>Choose...</option>
+          </select>
+        </div>
+        <button class="btn-primary btn-large" id="selector-close">
+          Close
+        </button>
+      </div>
+      <div class="form">
+        <form action="">
+          <div class="form-group">
+            <input type="text" class="form-control" id="student" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="list-group bg-transparent" id="fill-me"></div>
+      </div>
+    </div>
+    <script src="./bundle.js"></script>
+  </body>
+</html>

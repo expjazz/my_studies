@@ -1,0 +1,21 @@
+@import "~bootstrap/scss/bootstrap";
+body {
+  background: purple;
+  color: gold;
+}
+
+.bg-transparent {
+  background: transparent !important;
+}
+
+.select-menu {
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  transform: translateX(-400px);
+  transition: 2s;
+}
+
+.show {
+  transform: translateX(0);
+}

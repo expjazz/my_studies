@@ -1,0 +1,29 @@
+npm init -y initiate package
+npm install --save-dev webpack webpack-cli
+set up the scripts
+scripts { start: webpack }
+create the config file
+PUT INSIDE THE SCRIPT "watch": "webpacj --watch"
+ALSO "--config webpack.config.js"
+
+const path = require("path");
+module.exports = {
+  entry: "./src/index.js",
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+  },
+};
+
+put on the package json inside scripts --config webpack.config.js (inside start)
+
+you can set the mode to development
+
+to install SASS, go to webpack loaders page
+ to install bootstrap - npm install --save-dev bootstrap
+ do not forget of css and style loader
+
+put watch option in the package.json
+
+run npm start
+

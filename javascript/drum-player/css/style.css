@@ -1,0 +1,18 @@
+.bg-image {
+  background: url("../images/drum.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.piece {
+  width: 10%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.playing {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border-color: yellow;
+}
+/*# sourceMappingURL=style.css.map */

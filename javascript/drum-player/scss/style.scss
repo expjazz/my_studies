@@ -1,0 +1,15 @@
+.bg-image {
+  background: url("../images/drum.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+.piece {
+  width: 10%;
+  transition: all 1s;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: yellow;
+}

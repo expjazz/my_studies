@@ -1,0 +1,30 @@
+/*section{
+            border: 1px solid #aaa;
+            padding: 1rem;
+            font-family: "andale mono", sans-serif;
+        }*/
+p {
+  padding: 1rem;
+  cursor: pointer;
+  border: 2px solid #000;
+}
+div {
+  float: left;
+  overflow: auto;
+  box-sizing: border-box;
+  width: 50%;
+  border: 1px solid #aaa;
+  padding: 1rem;
+  font-family: "andale mono", sans-serif;
+}
+.enter {
+  background-color: rebeccapurple;
+  color: white;
+}
+.over {
+  background-color: #bada55;
+  color: #333;
+}
+.blue {
+  background-color: cornflowerblue;
+}
