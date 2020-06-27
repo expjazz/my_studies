@@ -1,0 +1,61 @@
+Array DEFINITION -
+
+Contiguous area of memory consisting of equal-size elements indexed by contiguous integers.
+
+Special about ARRAYS
+We have COnstant-time access read and write to each item
+
+To find the address we need a math count. (memory cost?)
+addres + el_size x (i - first_index )
+
+If multi-dimension array
+((3-1) x 6 + (4 - 1)) x ele_size + array_addres
+for rows    items we
+we skip     skip in 
+            the row 
+            element is
+THE 6 IS THE number of items per row
+
+How long it take to perform operations
+Add and write elements is ORDER 1 operation
+Add element to end of array and remove element from end of array
+is cheap because you dont need to realocate all other elements
+
+To Add and Remove in the beggining is of order N because
+you need to realocate all other elements. - LINEAR time
+
+In the middle is the same of adding in the begging.
+Arrays are GREAT to add and remove in the end, and they are great
+because of the constant time acess to the elements.
+
+
+Syngly-LINKED list
+
+every node contains a key and a pointer 
+
+List API (operations)
+
+PushFront(Key)
+its cheap - alocate new node in memory, update its new pointer to the now second element, and than updates pointer from head to the element created. ORDER 1
+PopFront(key) - its cheap. Just remove the node and apoint the pointer to next element. ORDER 1
+
+
+Key TopFront()
+Just look for the first element
+Pop TopFront()
+Update the head pointer, than remove the first element.
+
+PushBack(Key)- no tail ORDER N - pop and topback
+Need to start in the fist and go trought everyone until the end to add a node
+With the tailpointer is order 1 (equal to t begginer). ONLY for PUSH AND TOP
+with the tail the POP is expensive because we need to set the pointer to the second to last element(now the last), and the only way to do it 
+is iterating from the begining to the last
+
+
+Key TopBack
+Pop TopBack
+
+BOolean Find (list.include?)
+Erase(Key) - go from item to item (first do last) to find adn erase the key
+Boolean Empty - Check if list is empty
+Add Before (Node, Key) Adds a key before a note
