@@ -16,4 +16,17 @@ const intToStr = (x) => {
   }
   return (isNegative ? "-" : "") + s.reverse().join("");
 };
-console.log(intToStr(1234));
+
+const strToInt = (x) => {
+  let r = 0;
+  x.split("").forEach((temp) => {
+    if (r === 0) {
+      r = parseInt(temp);
+    } else {
+      r = r * 10 + parseInt(temp);
+    }
+  });
+  return r;
+};
+// console.log(intToStr(-12));
+console.log(strToInt("12345"));
