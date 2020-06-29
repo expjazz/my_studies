@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'byebug'
 class Node
   attr_reader :data
   attr_accessor :left, :right
@@ -30,19 +31,29 @@ def height(node)
   [left, right].max + 1
 end
 
-def whatever(node)
+def check_balanced(node)
   return true if node.nil?
+
+  left = check_balanced(node.left)
+  return false if left == false
+
+  right = check_balanced(node.right)
+  return false if right == false
+
+  (height(node.left) - height(node.right)).abs <= 1
 end
 
-def balanced_tree?(array, root = nil)
-  root = array_to_tree(array) if array.size.positive?
-  left = height(root.left)
-  right = height(root.right)
-  left - right <= 1
+def balanced_tree?(array)
+  node = array_to_tree(array)
+  check_balanced(node)
 end
 
-puts balanced_tree?([1, 2, 0, 3, 4, 0, 0])
+puts balanced_tree?([1, 2, 3, 0, 0, 4, 5, 0, 0, 0, 0, 6, 0, 7, 8])
+
+puts balanced_tree?([1, 2, 3])
+
+puts balanced_tree?([1, 2, 3, 4, 0, 0, 5, 6, 0, 0, 0, 0, 0, 0, 7])
+
 # => false
 
-puts balanced_tree?([1, 2, 3, 4, 5, 6, 7])
-# => true
+# => false
