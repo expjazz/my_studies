@@ -6,26 +6,19 @@ const noRepeat = (str) => {
     const leftChar = str[windowEnd];
     if (!hash[leftChar]) hash[leftChar] = 0;
     hash[leftChar] += 1;
-    while (check(hash) && windowStart <= windowEnd) {
+    console.log(check(hash, leftChar));
+    while (check(hash, leftChar)) {
       const rightChar = str[windowStart];
       hash[rightChar] -= 1;
       windowStart += 1;
     }
     result = Math.max(result, windowEnd - windowStart + 1);
-    console.log(hash);
   }
   return result;
 };
 
-const check = (hash) => {
-  let temp;
-  Object.keys(hash).forEach((key) => {
-    if (hash[key] > 1) {
-      temp = true;
-    }
-  });
-  if (temp !== true) temp = false;
-  return temp;
+const check = (hash, char) => {
+  return char in hash;
 };
 
 console.log(noRepeat("aabccbb"));
