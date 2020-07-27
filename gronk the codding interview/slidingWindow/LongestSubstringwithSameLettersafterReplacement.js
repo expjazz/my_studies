@@ -1,0 +1,1 @@
+const longestSubsSameLetters = (str, k) => {};
