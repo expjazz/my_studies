@@ -5,13 +5,15 @@ const noRepeat = (str) => {
   for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {
     const rightChar = str[windowEnd];
     if (rightChar in charIndexMax) {
-      windowStart = Math.max(windowStart, charIndexMax[rightChar]);
+      windowStart = Math.max(windowStart, charIndexMax[rightChar] + 1);
     }
     charIndexMax[rightChar] = windowEnd;
     maxLength = Math.max(maxLength, windowEnd - windowStart + 1);
   }
   return maxLength;
 };
+console.log(noRepeat("aabccbb"));
+console.log(noRepeat("abcabcbb"));
 
 // const noRepeat = (str) => {
 //   let windowStart = 0;
@@ -35,5 +37,3 @@ const noRepeat = (str) => {
 // const check = (hash, char) => {
 //   return char in hash;
 // };
-
-console.log(noRepeat("aabccbb"));
