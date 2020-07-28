@@ -5,6 +5,9 @@ const noRepeat = (str) => {
   for (let windowEnd = 0; windowEnd < str.length; windowEnd++) {
     const rightChar = str[windowEnd];
     if (rightChar in charIndexMax) {
+      console.log(windowStart);
+      console.log(charIndexMax[rightChar]);
+      console.log(rightChar);
       windowStart = Math.max(windowStart, charIndexMax[rightChar] + 1);
     }
     charIndexMax[rightChar] = windowEnd;
@@ -12,7 +15,8 @@ const noRepeat = (str) => {
   }
   return maxLength;
 };
-console.log(noRepeat("aabccbb"));
+console.log(noRepeat("abaccbb"));
+console.log("-----------------------------");
 console.log(noRepeat("abcabcbb"));
 
 // const noRepeat = (str) => {
