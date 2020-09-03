@@ -1,7 +1,0 @@
-linear search - you search for an element starting from the first index until you find it - runing time is increasing multiplicaly with size
-
-if the list is sorted, binary search works better
-
-Binary search - choose middle point, see if x > or < than middle. Depending the result do the same for either smaller list or bigger.
-
-
