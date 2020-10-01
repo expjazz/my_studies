@@ -1,0 +1,11 @@
+body {
+  padding: 3rem;
+}
+
+.post {
+  border-bottom: 1px solid black;
+}
+
+.post:last-child {
+  border-bottom: none;
+}
